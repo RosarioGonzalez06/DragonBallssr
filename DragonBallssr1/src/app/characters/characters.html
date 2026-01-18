@@ -1,0 +1,26 @@
+<div class="min-h-screen py-8 px-4" style="background-color: #1a202c;">
+  <div class="max-w-[1400px] mx-auto">
+    <h1 class="text-white text-2xl font-bold mb-6 pl-4"
+      style="border-left: 4px solid #ed8936; color: white; font-family: sans-serif;">
+      Characters
+    </h1>
+    <div class="grid grid-cols-4 sm:grid-cols-6 md:grid-cols-8 lg:grid-cols-10 gap-2"
+      style="display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;">
+
+      <div *ngFor="let c of characters"
+        class="flex flex-col bg-white rounded-lg overflow-hidden shadow hover:shadow-lg transition-transform duration-200 hover:scale-105 border border-gray-200"
+        style="width: 120px; background-color: white; border-radius: 8px; overflow: hidden; display: flex; flex-direction: column; flex-shrink: 0; border: 1px solid #e2e8f0;">
+        <div class="flex items-center justify-center p-2"
+          style="height: 120px; display: flex; align-items: center; justify-content: center; background-color: #f7fafc;">
+          <img [src]="c.image" [alt]="c.name" style="width: 80px; height: 80px; object-fit: contain;" />
+        </div>
+        <div class="bg-gray-800 py-2 px-1" style="background-color: #2d3748; padding: 4px;">
+          <h3 class="text-white uppercase text-center truncate"
+            style="color: white; font-size: 10px; font-weight: bold; margin: 0; text-transform: uppercase; font-family: sans-serif;">
+            {{ c.name }}
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
